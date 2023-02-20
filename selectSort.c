@@ -1,7 +1,7 @@
 #define MAXSIZE                                                                                 \
     10 typedef struct                                                                           \
-    {                       /* ÓÃÓÚ´æ´¢ÒªÅÅĞòÊı×é£¬r[0]ÓÃ×÷ÉÚ±ø»òÁÙÊ±±äÁ¿ */ \
-        int r[MAXSIZE + 1]; /* ÓÃÓÚ¼ÇÂ¼Ë³Ğò±íµÄ³¤¶È */                                \
+    {                       /* ç”¨äºå­˜å‚¨è¦æ’åºæ•°ç»„ï¼Œr[0]ç”¨ä½œå“¨å…µæˆ–ä¸´æ—¶å˜é‡ */ \
+        int r[MAXSIZE + 1]; /* ç”¨äºè®°å½•é¡ºåºè¡¨çš„é•¿åº¦ */                                \
         int length;                                                                             \
     } SqList;
 
@@ -14,14 +14,14 @@ struct swap(SqList *L, int i, int j)
 void SelectSort(SqList *L)
 {
     int i, j, min;
-    for (int i = 0; i < SqList->length - 1; i++)
+    for (int i = 0; i < SqList->length - 1; i++)//å¤–å¾ªç¯äº¤æ¢
     {
-        min = i;
+        min = i;//å½“å‰æœ€å°ç´¢å¼•
         for (int j = i + 1; j < SqList->length - 1; j++)
         {
             if (SqList->r[min] > SqList->[j])
             {
-                min = j;
+                min = j;//å†…å¾ªç¯æœ€å°ç´¢å¼•
             }
         }
         if (i != min)
